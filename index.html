@@ -106,55 +106,30 @@
         </div>
         </section>
 
-        <!--Thank You-->
 
         <script>
-            // document.getElementById('first-increase', 'economy-increase' ).addEventListener('click', function(){
-            //     const firstTicketIncrease = document.getElementById('first-increase').value;
-            //     const ticketCostFirst = firstTicketIncrease * 150;
 
-            //     const economyTicketIncrease = document.getElementById('economy-increase').value;
-            //     const ticketCostEconomy = economyTicketIncrease * 100;
+            document.getElementById('first-increase', 'economy-increase' ).addEventListener('click', function(){
 
-
-            //     const SubTotalCost = ticketCostFirst + ticketCostEconomy;
-            //     document.getElementById("sub-total").innerText = SubTotalCost;
-
-            //     const vat = SubTotalCost * 0.1;
-            //     document.getElementById('vat').innerText = vat;
-
-            //     const totalCost = vat + SubTotalCost;
-            //     document.getElementById('total').innerText = totalCost;
-            // });
-
-
-            document.getElementById('first-increase').addEventListener('click', function first(ticketCostFirst) {
                 const firstTicketIncrease = document.getElementById('first-increase').value;
                 const ticketCostFirst = firstTicketIncrease * 150;
-                return ticketCostFirst;
 
-            });
-
-            document.getElementById('economy-increase').addEventListener('click', function economy(ticketCostEconomy) {
                 const economyTicketIncrease = document.getElementById('economy-increase').value;
                 const ticketCostEconomy = economyTicketIncrease * 100;
-                return ticketCostEconomy;
+
+
+                const SubTotalCost = ticketCostFirst + ticketCostEconomy;
+                document.getElementById("sub-total").innerText = SubTotalCost;
+
+                const vat = SubTotalCost * 0.1;
+                document.getElementById('vat').innerText = vat;
+
+                const totalCost = vat + SubTotalCost;
+                document.getElementById('total').innerText = totalCost;
 
             });
 
-            function calculate(first, economy) {
-                const SubTotalCost = first() + economy ();
-                const vat = SubTotalCost * 0.1;
-                const totalCost = vat + SubTotalCost;
-                document.getElementById("sub-total").innerText = SubTotalCost;
-                document.getElementById('vat').innerText = vat;
-                document.getElementById('total').innerText = totalCost;
-                
-            }
 
-    
-
-                
             
         </script>
 </body>
